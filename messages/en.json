@@ -1,0 +1,91 @@
+{
+  "navigation": {
+    "home": "HOME",
+    "aboutUs": "ABOUT US",
+    "forEmployers": "FOR EMPLOYERS",
+    "forEmployees": "FOR EMPLOYEES",
+    "availableVacancies": "AVAILABLE VACANCIES",
+    "contactUs": "CONTACT US"
+  },
+  "hero": {
+    "title": "EXPRESNÍ PRÁCE",
+    "subtitle": "A JOB THAT FITS",
+    "accent": "YOU !",
+    "description": "EXPRESNÍ PRÁCE — a modern company specializing in personnel outsourcing and leasing, helping people quickly and legally find stable jobs in trusted industries.",
+    "cta": "CONTACT US",
+    "reviews": "10k+ positive reviews",
+    "builtForAction": {
+      "title": "Built for Action",
+      "description": "Redefining the way work begins. From first contact to lasting employment — fast, fair, and reliable."
+    }
+  },
+  "aboutUs": {
+    "title": "ABOUT US",
+    "description1": "EXPRESNÍ PRÁCE — a dynamically developing company operating in the Czech Republic, dedicated to providing people with legal and stable employment.",
+    "description2": "We specialize in outsourcing, outstaffing, and personnel leasing, offering verified job opportunities in courier delivery, taxi services, construction, cleaning, and many other industries."
+  },
+  "forEmployers": {
+    "title": "FOR EMPLOYERS",
+    "intro1": "By partnering with EXPRESNÍ PRÁCE, you gain a reliable partner in the field of recruitment and personnel leasing.",
+    "intro2": "We take care of everything related to searching, onboarding, and managing employees — so you can focus entirely on growing your business.",
+    "services": {
+      "fastSelection": "Fast selection of qualified specialists for any task",
+      "flexibleTerms": "Flexible cooperation terms",
+      "optimization": "Optimization of personnel expenses",
+      "responsibility": "Responsibility and guaranteed quality for every employee",
+      "timeSavings": "Time and cost savings in hiring and documentation",
+      "support": "Full legal and HR support"
+    }
+  },
+  "forEmployees": {
+    "title": "EXPRESNÍ PRÁCE EMPLOYEES RECEIVE:",
+    "benefits": {
+      "income": "High and stable income",
+      "contract": "Official employment contract with full insurance and social guarantees",
+      "taxes": "All taxes paid by the employer",
+      "transportation": "Transportation provided when required for work",
+      "training": "Training and support even without prior experience — we value the willingness to learn"
+    }
+  },
+  "availableVacancies": {
+    "title": "AVAILABLE VACANCIES",
+    "jobs": {
+      "courierDelivery": "Courier delivery",
+      "construction": "Construction",
+      "taxi": "Taxi",
+      "cleaning": "Cleaning",
+      "generalLabor": "General labor / Seasonal work",
+      "yourProposals": "Your proposals"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "formType": {
+      "jobSeeker": "Looking for a Job",
+      "employer": "Request Personnel"
+    },
+    "form": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "phoneNumber": "Phone Number",
+      "phoneNumberPlaceholder": "+420 123 456 789",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "companyName": "Company Name",
+      "companyNamePlaceholder": "Enter your company name",
+      "suggestion": "Message / Suggestion",
+      "suggestionPlaceholder": "Tell us about your needs or questions...",
+      "privacyText": "By submitting your data, you agree to the",
+      "privacyLink": "Privacy Policy",
+      "submit": "Contact Us",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully.",
+      "error": "Sorry, there was an error sending your message. Please try again."
+    }
+  },
+  "footer": {
+    "tagline": "Beyond Technical Analysis",
+    "navigation": "Navigation",
+    "copyright": "© 2025 expresní práce platform. all rights reserved"
+  }
+}

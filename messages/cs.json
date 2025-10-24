@@ -1,0 +1,91 @@
+{
+  "navigation": {
+    "home": "DOMŮ",
+    "aboutUs": "O NÁS",
+    "forEmployers": "PRO ZAMĚSTNAVATELE",
+    "forEmployees": "PRO ZAMĚSTNANCE",
+    "availableVacancies": "VOLNÁ MÍSTA",
+    "contactUs": "KONTAKT"
+  },
+  "hero": {
+    "title": "EXPRESNÍ PRÁCE",
+    "subtitle": "PRÁCE, KTERÁ SEDÍ",
+    "accent": "VÁM !",
+    "description": "EXPRESNÍ PRÁCE — moderní společnost specializující se na personální outsourcing a leasing, pomáhající lidem rychle a legálně najít stabilní práci v důvěryhodných odvětvích.",
+    "cta": "KONTAKTUJTE NÁS",
+    "reviews": "10k+ pozitivních hodnocení",
+    "builtForAction": {
+      "title": "Vytvořeno pro akci",
+      "description": "Redefinujeme způsob, jakým práce začíná. Od prvního kontaktu po trvalé zaměstnání — rychle, spravedlivě a spolehlivě."
+    }
+  },
+  "aboutUs": {
+    "title": "O NÁS",
+    "description1": "EXPRESNÍ PRÁCE — dynamicky se rozvíjející společnost působící v České republice, zaměřená na poskytování legálního a stabilního zaměstnání.",
+    "description2": "Specializujeme se na outsourcing, outstaffing a personální leasing, nabízíme ověřené pracovní příležitosti v kurýrní dopravě, taxi službách, stavebnictví, úklidu a mnoha dalších odvětvích."
+  },
+  "forEmployers": {
+    "title": "PRO ZAMĚSTNAVATELE",
+    "intro1": "Partnerstvím s EXPRESNÍ PRÁCE získáváte spolehlivého partnera v oblasti náboru a personálního leasingu.",
+    "intro2": "Postaráme se o vše související s hledáním, nástupem a řízením zaměstnanců — abyste se mohli plně soustředit na růst svého podnikání.",
+    "services": {
+      "fastSelection": "Rychlý výběr kvalifikovaných specialistů pro jakýkoliv úkol",
+      "flexibleTerms": "Flexibilní podmínky spolupráce",
+      "optimization": "Optimalizace personálních nákladů",
+      "responsibility": "Odpovědnost a garantovaná kvalita pro každého zaměstnance",
+      "timeSavings": "Úspora času a nákladů při náboru a dokumentaci",
+      "support": "Plná právní a personální podpora"
+    }
+  },
+  "forEmployees": {
+    "title": "ZAMĚSTNANCI EXPRESNÍ PRÁCE ZÍSKÁVAJÍ:",
+    "benefits": {
+      "income": "Vysoký a stabilní příjem",
+      "contract": "Oficiální pracovní smlouva s plným pojištěním a sociálními zárukami",
+      "taxes": "Všechny daně hradí zaměstnavatel",
+      "transportation": "Doprava zajištěna při nutnosti pro práci",
+      "training": "Školení a podpora i bez předchozích zkušeností — ceníme si ochoty učit se"
+    }
+  },
+  "availableVacancies": {
+    "title": "VOLNÁ MÍSTA",
+    "jobs": {
+      "courierDelivery": "Kurýrní doručování",
+      "construction": "Stavebnictví",
+      "taxi": "Taxi",
+      "cleaning": "Úklid",
+      "generalLabor": "Obecná práce / Sezónní práce",
+      "yourProposals": "Vaše návrhy"
+    }
+  },
+  "contact": {
+    "title": "Spojte se s námi",
+    "formType": {
+      "jobSeeker": "Hledám práci",
+      "employer": "Požaduji personál"
+    },
+    "form": {
+      "fullName": "Celé jméno",
+      "fullNamePlaceholder": "Zadejte své celé jméno",
+      "phoneNumber": "Telefonní číslo",
+      "phoneNumberPlaceholder": "+420 123 456 789",
+      "email": "E-mail",
+      "emailPlaceholder": "vas.email@priklad.cz",
+      "companyName": "Název společnosti",
+      "companyNamePlaceholder": "Zadejte název vaší společnosti",
+      "suggestion": "Zpráva / Návrh",
+      "suggestionPlaceholder": "Řekněte nám o svých potřebách nebo dotazech...",
+      "privacyText": "Odesláním svých údajů souhlasíte se",
+      "privacyLink": "Zásadami ochrany osobních údajů",
+      "submit": "Kontaktujte nás",
+      "sending": "Odesílání...",
+      "success": "Děkujeme! Vaše zpráva byla úspěšně odeslána.",
+      "error": "Omlouváme se, při odesílání zprávy došlo k chybě. Zkuste to prosím znovu."
+    }
+  },
+  "footer": {
+    "tagline": "Za hranicemi technické analýzy",
+    "navigation": "Navigace",
+    "copyright": "© 2025 platforma expresní práce. všechna práva vyhrazena"
+  }
+}
