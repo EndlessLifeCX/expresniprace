@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import './ContactForm.scss';
 
 // Schema for "Looking for a job" form (no company name)
@@ -43,7 +43,6 @@ type FormType = 'jobSeeker' | 'employer';
 
 export default function ContactForm() {
   const t = useTranslations();
-  const locale = useLocale();
   const [formType, setFormType] = useState<FormType>('jobSeeker');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -58,7 +57,7 @@ export default function ContactForm() {
     resolver: zodResolver(contactSchema),
     defaultValues: {
       formType: 'jobSeeker',
-      agreeToPrivacy: false as any,
+      agreeToPrivacy: false,
     },
   });
 
@@ -73,7 +72,7 @@ export default function ContactForm() {
       email: '',
       companyName: '',
       suggestion: '',
-      agreeToPrivacy: false as any,
+      agreeToPrivacy: false,
     });
     setSubmitStatus('idle');
   };
@@ -100,7 +99,7 @@ export default function ContactForm() {
           email: '',
           companyName: '',
           suggestion: '',
-          agreeToPrivacy: false as any,
+          agreeToPrivacy: false,
         });
       } else {
         setSubmitStatus('error');

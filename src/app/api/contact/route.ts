@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { z } from 'zod';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend("re_MPovoDGJ_KkuUfUo1bkYC7BW6h44Gimcb");
 
 
 // Schema for "Looking for a job" form (no company name)

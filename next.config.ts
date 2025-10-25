@@ -7,7 +7,7 @@ const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
 const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: [path.join(process.cwd(), 'src/styles')],
-    prependData: `@import 'variables';`,
+    prependData: `@use 'variables' as *;`,
   },
 };
 
