@@ -1,6 +1,6 @@
 .contact-section {
   padding: 60px 20px;
-  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+  background: $main-bg;
 
   .container {
     max-width: 800px;
@@ -34,7 +34,7 @@
       transition: all 0.3s ease;
 
       &:hover {
-        border-color: #0066cc;
+        border-color: $text-dark;
         color: #0066cc;
         background: #f0f7ff;
       }
@@ -75,17 +75,17 @@
       textarea {
         width: 100%;
         padding: 12px 16px;
-        border: 2px solid #e0e0e0;
-        border-radius: 8px;
+        border: 2px solid $secondary-light-blue;
+        border-radius: 1rem;
         font-size: 1rem;
         font-family: inherit;
         transition: all 0.3s ease;
-        background: #fafafa;
+        background:#E9F4FF;
 
         &:focus {
           outline: none;
-          border-color: #0066cc;
-          background: white;
+          border-color: $text-dark;
+          background: #E9F4FF;
           box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
         }
 
@@ -98,7 +98,9 @@
           color: #999;
         }
       }
-
+      input{
+        border-radius: 2rem;
+      }
       textarea {
         resize: vertical;
         min-height: 120px;

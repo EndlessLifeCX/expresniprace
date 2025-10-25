@@ -1,0 +1,11 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  .logo-image {
+   
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}

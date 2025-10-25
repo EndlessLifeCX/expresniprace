@@ -1,100 +1,19 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import Header from '../components/Header';
+import Logo from '../components/Logo';
 import ContactForm from '../components/contact-us/ContactForm';
 import './page.scss';
 
 export default function Home() {
   const t = useTranslations();
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
-  const languageDropdownRef = useRef<HTMLDivElement>(null);
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target as Node)) {
-        setIsLanguageDropdownOpen(false);
-      }
-    };
-
-    if (isLanguageDropdownOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isLanguageDropdownOpen]);
-
-  const switchLanguage = (newLocale: string) => {
-    const segments = pathname.split('/');
-    segments[1] = newLocale;
-    router.push(segments.join('/'));
-    setIsLanguageDropdownOpen(false);
-  };
 
   return (
     <div className="expresni-prace">
       {/* Header */}
-      <header className="header">
-        <div className="container">
-          <div className="header-content">
-            <div className="logo">
-              <span className="logo-text">E|P</span>
-            </div>
-            <nav className="nav">
-              <a href="#home" className="nav-link">{t('navigation.home')}</a>
-              <a href="#about" className="nav-link">{t('navigation.aboutUs')}</a>
-              <a href="#employers" className="nav-link">{t('navigation.forEmployers')}</a>
-              <a href="#employees" className="nav-link">{t('navigation.forEmployees')}</a>
-              <a href="#vacancies" className="nav-link">{t('navigation.availableVacancies')}</a>
-            </nav>
-            <div className="header-actions">
-              <div className="language-selector" ref={languageDropdownRef}>
-                <button
-                  className="lang-dropdown-toggle"
-                  onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
-                >
-                  {locale === 'en' ? 'EN' : 'CZ'}
-                  <svg
-                    className={`dropdown-arrow ${isLanguageDropdownOpen ? 'open' : ''}`}
-                    width="12"
-                    height="8"
-                    viewBox="0 0 12 8"
-                    fill="none"
-                  >
-                    <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-                {isLanguageDropdownOpen && (
-                  <div className="lang-dropdown-menu">
-                    <button
-                      className={`lang-dropdown-item ${locale === 'en' ? 'active' : ''}`}
-                      onClick={() => switchLanguage('en')}
-                    >
-                      EN
-                    </button>
-                    <button
-                      className={`lang-dropdown-item ${locale === 'cs' ? 'active' : ''}`}
-                      onClick={() => switchLanguage('cs')}
-                    >
-                      CZ
-                    </button>
-                  </div>
-                )}
-              </div>
-              <button className="contact-btn">{t('navigation.contactUs')}</button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="hero" id="home">
@@ -331,7 +250,7 @@ export default function Home() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-brand">
-              <div className="footer-logo">E|P</div>
+              <Logo className="footer-logo" />
               <p className="footer-tagline">{t('footer.tagline')}</p>
             </div>
             <div className="footer-nav">

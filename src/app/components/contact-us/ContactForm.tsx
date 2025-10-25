@@ -114,7 +114,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="contact-section">
+    <section className="contact-section" id='contact'>
       <div className="container">
         <h2 className="section-title">{t('contact.title')}</h2>
 
