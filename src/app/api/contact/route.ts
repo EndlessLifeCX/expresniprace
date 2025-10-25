@@ -2,7 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { z } from 'zod';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const apiKey = process.env.RESEND_API_KEY;
+
+if (!apiKey) {
+  console.error('⚠️ RESEND_API_KEY is not defined in environment variables');
+  console.error('Please add RESEND_API_KEY to your .env.local file');
+}
+
+const resend = new Resend(apiKey || '');
 
 
 // Schema for "Looking for a job" form (no company name)
@@ -38,6 +45,14 @@ const contactSchema = z.discriminatedUnion('formType', [
 
 export async function POST(request: NextRequest) {
   try {
+    // Check if API key is configured
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: 'Email service not configured. Please contact administrator.' },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
 
     // Validate the request body
