@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
 
     // Using dummy data for now - in production, update from/to addresses
     const { data, error } = await resend.emails.send({
-      from: 'Contact Form <expresniprace@resend.dev>', // TODO: Update to verified domain
+      from: 'Contact Form <event@expresni-prace.com>', // TODO: Update to verified domain
       to: ['expresni.prace@gmail.com'], // TODO: Update to your email
       subject,
       html: `
