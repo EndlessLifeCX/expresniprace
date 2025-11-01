@@ -8,11 +8,15 @@
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 40px;
     color: #1a1a1a;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
 
   // Form Type Switcher
@@ -68,7 +72,7 @@
         margin-bottom: 8px;
         font-weight: 500;
         color: #333;
-        font-size: 0.95rem;
+        font-size: 1rem;
       }
 
       input,
@@ -130,7 +134,7 @@
 
           span {
             color: #555;
-            font-size: 0.9rem;
+            font-size: 1rem;
             line-height: 1.5;
 
             a {
@@ -149,7 +153,7 @@
         display: block;
         margin-top: 6px;
         color: #dc3545;
-        font-size: 0.875rem;
+        font-size: 1rem;
         font-weight: 500;
       }
     }
@@ -161,11 +165,15 @@
       color: white;
       border: none;
       border-radius: 8px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
       margin-top: 12px;
+
+      @media (min-width: 768px) {
+        font-size: 1.1rem;
+      }
 
       &:hover:not(:disabled) {
         background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);

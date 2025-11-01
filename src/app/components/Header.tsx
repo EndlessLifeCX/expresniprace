@@ -13,8 +13,10 @@ export default function Header() {
   const pathname = usePathname();
 
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+  const [isMobileLanguageDropdownOpen, setIsMobileLanguageDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const languageDropdownRef = useRef<HTMLDivElement>(null);
+  const mobileLanguageDropdownRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const burgerButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -74,6 +76,7 @@ export default function Header() {
     segments[1] = newLocale;
     router.push(segments.join('/'));
     setIsLanguageDropdownOpen(false);
+    setIsMobileLanguageDropdownOpen(false);
   };
 
   const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -114,7 +117,7 @@ export default function Header() {
                 className="lang-dropdown-toggle"
                 onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
               >
-                {locale === 'en' ? 'EN' : 'CZ'}
+                {locale === 'en' ? 'EN' : locale === 'cs' ? 'CZ' : 'RU'}
                 <svg
                   className={`dropdown-arrow ${isLanguageDropdownOpen ? 'open' : ''}`}
                   width="12"
@@ -139,6 +142,12 @@ export default function Header() {
                   >
                     CZ
                   </button>
+                  <button
+                    className={`lang-dropdown-item ${locale === 'ru' ? 'active' : ''}`}
+                    onClick={() => switchLanguage('ru')}
+                  >
+                    RU
+                  </button>
                 </div>
               )}
             </div>
@@ -162,8 +171,60 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`} ref={mobileMenuRef}>
-          {/* Mobile Menu Logo */}
-          <Logo className="mobile-menu-logo" />
+          {/* Mobile Menu Header */}
+          <div className="mobile-menu-header">
+            <div className="mobile-menu-header-left">
+              <Logo className="mobile-menu-logo" />
+              <div className="mobile-language-selector" ref={mobileLanguageDropdownRef}>
+                <button
+                  className="mobile-lang-dropdown-toggle"
+                  onClick={() => setIsMobileLanguageDropdownOpen(!isMobileLanguageDropdownOpen)}
+                >
+                  {locale === 'en' ? 'EN' : locale === 'cs' ? 'CZ' : 'RU'}
+                  <svg
+                    className={`dropdown-arrow ${isMobileLanguageDropdownOpen ? 'open' : ''}`}
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                  >
+                    <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {isMobileLanguageDropdownOpen && (
+                  <div className="mobile-lang-dropdown-menu">
+                    <button
+                      className={`mobile-lang-dropdown-item ${locale === 'en' ? 'active' : ''}`}
+                      onClick={() => {
+                        switchLanguage('en');
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      EN
+                    </button>
+                    <button
+                      className={`mobile-lang-dropdown-item ${locale === 'cs' ? 'active' : ''}`}
+                      onClick={() => {
+                        switchLanguage('cs');
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      CZ
+                    </button>
+                    <button
+                      className={`mobile-lang-dropdown-item ${locale === 'ru' ? 'active' : ''}`}
+                      onClick={() => {
+                        switchLanguage('ru');
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      RU
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
 
           <nav className="mobile-nav">
             <a href="#home" className="mobile-nav-link" onClick={(e) => handleNavLinkClick(e, 'home')}>
@@ -185,26 +246,6 @@ export default function Header() {
 
           {/* Mobile Menu Actions */}
           <div className="mobile-menu-actions">
-            <div className="mobile-language-selector">
-              <button
-                className={`mobile-lang-btn ${locale === 'en' ? 'active' : ''}`}
-                onClick={() => {
-                  switchLanguage('en');
-                  setIsMobileMenuOpen(false);
-                }}
-              >
-                EN
-              </button>
-              <button
-                className={`mobile-lang-btn ${locale === 'cs' ? 'active' : ''}`}
-                onClick={() => {
-                  switchLanguage('cs');
-                  setIsMobileMenuOpen(false);
-                }}
-              >
-                CZ
-              </button>
-            </div>
             <a
               href="#contact"
               className="contact-btn mobile-contact-btn"
