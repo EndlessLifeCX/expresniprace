@@ -6,7 +6,7 @@ export default createMiddleware({
   locales,
 
   // Used when no locale matches
-  defaultLocale: 'en',
+  defaultLocale: 'cs',
 
   // Always use locale prefix
   localePrefix: 'always'
@@ -14,5 +14,5 @@ export default createMiddleware({
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(cs|en)/:path*', '/((?!api|_next|_vercel|.*\\..*).*)']
+  matcher: ['/', '/(cs|en|ru)/:path*', '/((?!api|_next|_vercel|.*\\..*).*)']
 };
